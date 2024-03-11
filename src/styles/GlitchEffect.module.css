@@ -1,0 +1,61 @@
+.glitchText {
+  color: hsl(230, 100%, 95%); /* Set an initial color */
+  animation: lights 9s 750ms linear infinite;
+  text-stroke: 1000px black;
+}
+
+@keyframes lights {
+  0%,
+  100% {
+    color: hsl(230, 40%, 80%);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    text-stroke: 1000px black;
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    color: hsl(230, 100%, 95%);
+    text-shadow: 0 0 2em hsla(320, 100%, 50%, 0.5),
+      0 0 0.5em hsla(320, 100%, 60%, 0.5),
+      -2em -0.5em 1em hsla(40, 100%, 60%, 0.5),
+      2em 0.5em 1em hsla(200, 100%, 60%, 0.5);
+    text-stroke: 1000px black;
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    color: hsl(230, 60%, 85%);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.3),
+      0 0 0.25em hsla(320, 100%, 60%, 0.3),
+      -1em -0.25em 0.5em hsla(40, 100%, 60%, 0.3),
+      1em 0.25em 0.5em hsla(200, 100%, 60%, 0.3);
+    text-stroke: 1000px black;
+  }
+}
+
+.container {
+  margin: 0;
+  font: 100% / 1.5 Raleway, sans-serif;
+  color: hsl(230, 100%, 95%);
+  background: linear-gradient(135deg, hsl(230, 40%, 12%), hsl(230, 20%, 7%));
+  height: 100vh;
+  color: hsl(230, 100%, 95%);
+  display: flex;
+  text-stroke: 1000px black;
+}
+
+.textEffect {
+  margin: auto;
+  font-size: 3rem !important; /* Adjusted to make sure it's applied */
+  font-weight: 300;
+  font-family: "Trebuchet MS", sans-serif; /* Ensure this font is loaded or available */
+  animation: lights 1s 750ms linear infinite;
+  -webkit-text-stroke: 100000px black; /* Thin black outline for webkit browsers */
+  text-stroke: 1000px black; /* Thin black outline for other browsers, if supported */
+}
